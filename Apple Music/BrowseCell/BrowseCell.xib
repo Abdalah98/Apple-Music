@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BrowseCell" id="gTV-IL-0wX" customClass="BrowseCell" customModule="Apple_Music" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="230"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="288" height="230"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3Oy-O2-Con">
+                        <rect key="frame" x="0.0" y="36.5" width="288" height="193.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wce-qR-Js6">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJs-cx-S6L">
+                        <rect key="frame" x="20" y="0.5" width="171" height="36"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Xj-J4-FC5">
+                        <rect key="frame" x="20" y="0.0" width="248" height="0.5"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="VTQ-A0-4Li"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3Oy-O2-Con" secondAttribute="trailing" id="3JB-Bz-6EQ"/>
+                <constraint firstItem="LJs-cx-S6L" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Ara-Ux-FMy"/>
+                <constraint firstItem="LJs-cx-S6L" firstAttribute="top" secondItem="2Xj-J4-FC5" secondAttribute="bottom" id="F6b-HO-qkA"/>
+                <constraint firstItem="3Oy-O2-Con" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FTR-dU-s4t"/>
+                <constraint firstItem="3Oy-O2-Con" firstAttribute="top" secondItem="LJs-cx-S6L" secondAttribute="bottom" id="RJy-8D-cD1"/>
+                <constraint firstAttribute="bottom" secondItem="3Oy-O2-Con" secondAttribute="bottom" id="SbQ-hj-NX3"/>
+                <constraint firstAttribute="trailing" secondItem="2Xj-J4-FC5" secondAttribute="trailing" constant="20" id="aEm-eJ-3dQ"/>
+                <constraint firstItem="2Xj-J4-FC5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="as1-hS-Sif"/>
+                <constraint firstItem="2Xj-J4-FC5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pj4-X7-7aB"/>
+            </constraints>
+            <size key="customSize" width="288" height="230"/>
+            <connections>
+                <outlet property="collectionBrowseCell" destination="3Oy-O2-Con" id="v9j-VV-i0P"/>
+                <outlet property="titleLabel" destination="LJs-cx-S6L" id="ccK-lf-zn8"/>
+            </connections>
+            <point key="canvasLocation" x="-173.91304347826087" y="42.1875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

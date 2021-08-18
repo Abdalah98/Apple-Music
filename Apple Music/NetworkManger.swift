@@ -13,18 +13,30 @@ class NetworkManger {
     static let shared = NetworkManger()
     
 
-//    
-//    func getTopHeadlinesCountry(completion: @escaping (Result<TopHeadlinesCountry , ResoneError>) -> Void){
-//        fetchGenericJSONData(urlString:URLS.topHeadlinesCountry , completion: completion)
-//    }
-//
-//    
-//    func getTopHeadlinesSources(completion: @escaping (Result<TopHeadlinesSources , ResoneError>) -> Void){
-//        
-//        fetchGenericJSONData(urlString: URLS.topHeadlinesSources, completion: completion)
-//    }
-//    
-//    
+    
+    func getTopSongs(completion: @escaping (Result<DataofSongs , ResoneError>) -> Void){
+        fetchGenericJSONData(urlString:URLS.topSongs , completion: completion)
+    }
+
+    
+    func getTopAlbums(completion: @escaping (Result<DataofSongs , ResoneError>) -> Void){
+        fetchGenericJSONData(urlString:URLS.topAlbums , completion: completion)
+    }
+    
+    func getNewReleases(completion: @escaping (Result<DataofSongs , ResoneError>) -> Void){
+        fetchGenericJSONData(urlString:URLS.newReleases , completion: completion)
+    }
+    
+    
+    func getHotTracks(completion: @escaping (Result<DataofSongs , ResoneError>) -> Void){
+        fetchGenericJSONData(urlString:URLS.hotTracks , completion: completion)
+    }
+    
+    func getComingSoon(completion: @escaping (Result<DataofSongs , ResoneError>) -> Void){
+        fetchGenericJSONData(urlString:URLS.comingSoon , completion: completion)
+    }
+    
+    
 //    func searchAllEverything(searchText:String,completion: @escaping (Result<TopHeadlinesCountry , ResoneError>) -> Void){
 //        let urlString = URLS.main +  "everything?q=\(searchText)&from=2021-08-13&sortBy=popularity&apiKey=" + URLS.apiKey
 //        fetchGenericJSONData(urlString: urlString, completion: completion)
