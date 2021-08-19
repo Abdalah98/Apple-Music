@@ -76,6 +76,7 @@
             <connections>
                 <outlet property="imageMusic" destination="ljG-IX-dOP" id="20M-0x-rsC"/>
                 <outlet property="nameArtist" destination="xPz-3N-Ayt" id="POa-BC-kyB"/>
+                <outlet property="nameLabel" destination="vHw-RH-Vu3" id="V2g-Mj-jpr"/>
                 <outlet property="nameMusic" destination="7hw-gL-go4" id="X75-If-Tcj"/>
             </connections>
             <point key="canvasLocation" x="144" y="49"/>

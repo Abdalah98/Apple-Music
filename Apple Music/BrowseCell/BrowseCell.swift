@@ -11,7 +11,13 @@ class BrowseCell: UICollectionViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionBrowseCell: UICollectionView!
+    
+    var didSelectCell:((Results)->())?
+    var didSelect:(()->())?
     var allSongs = [Results]()
    
-
+    
+    @IBAction func seeAllSongAction(_ sender: Any) {
+        didSelect?()
+    }
 }

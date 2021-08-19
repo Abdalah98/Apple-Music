@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="288" height="230"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3Oy-O2-Con">
-                        <rect key="frame" x="0.0" y="36.5" width="288" height="193.5"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3Oy-O2-Con">
+                        <rect key="frame" x="0.0" y="41.5" width="288" height="188.5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wce-qR-Js6">
                             <size key="itemSize" width="128" height="128"/>
@@ -28,7 +28,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJs-cx-S6L">
-                        <rect key="frame" x="20" y="0.5" width="171" height="36"/>
+                        <rect key="frame" x="20" y="5.5" width="171" height="36"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -40,18 +40,30 @@
                             <constraint firstAttribute="height" constant="0.5" id="VTQ-A0-4Li"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfv-lL-aGr">
+                        <rect key="frame" x="217" y="12.5" width="55" height="33"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <state key="normal" title="See All">
+                            <color key="titleColor" systemColor="systemRedColor"/>
+                        </state>
+                        <connections>
+                            <action selector="seeAllSongAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="DI8-TI-VTP"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="3Oy-O2-Con" secondAttribute="trailing" id="3JB-Bz-6EQ"/>
                 <constraint firstItem="LJs-cx-S6L" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Ara-Ux-FMy"/>
-                <constraint firstItem="LJs-cx-S6L" firstAttribute="top" secondItem="2Xj-J4-FC5" secondAttribute="bottom" id="F6b-HO-qkA"/>
+                <constraint firstItem="LJs-cx-S6L" firstAttribute="top" secondItem="2Xj-J4-FC5" secondAttribute="bottom" constant="5" id="F6b-HO-qkA"/>
                 <constraint firstItem="3Oy-O2-Con" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FTR-dU-s4t"/>
                 <constraint firstItem="3Oy-O2-Con" firstAttribute="top" secondItem="LJs-cx-S6L" secondAttribute="bottom" id="RJy-8D-cD1"/>
                 <constraint firstAttribute="bottom" secondItem="3Oy-O2-Con" secondAttribute="bottom" id="SbQ-hj-NX3"/>
+                <constraint firstItem="Jfv-lL-aGr" firstAttribute="top" secondItem="2Xj-J4-FC5" secondAttribute="bottom" constant="12" id="VSt-b2-ew5"/>
                 <constraint firstAttribute="trailing" secondItem="2Xj-J4-FC5" secondAttribute="trailing" constant="20" id="aEm-eJ-3dQ"/>
                 <constraint firstItem="2Xj-J4-FC5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="as1-hS-Sif"/>
+                <constraint firstAttribute="trailing" secondItem="Jfv-lL-aGr" secondAttribute="trailing" constant="16" id="o8Y-Og-xZ6"/>
                 <constraint firstItem="2Xj-J4-FC5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pj4-X7-7aB"/>
             </constraints>
             <size key="customSize" width="288" height="230"/>
@@ -59,7 +71,7 @@
                 <outlet property="collectionBrowseCell" destination="3Oy-O2-Con" id="v9j-VV-i0P"/>
                 <outlet property="titleLabel" destination="LJs-cx-S6L" id="ccK-lf-zn8"/>
             </connections>
-            <point key="canvasLocation" x="-173.91304347826087" y="42.1875"/>
+            <point key="canvasLocation" x="55" y="29"/>
         </collectionViewCell>
     </objects>
     <resources>
@@ -68,6 +80,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

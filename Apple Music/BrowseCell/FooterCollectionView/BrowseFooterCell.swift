@@ -12,11 +12,8 @@ class BrowseFooterCell: UICollectionViewCell {
     @IBOutlet weak var imageArtist: UIImageView!
     @IBOutlet weak var collectionName: UILabel!
     @IBOutlet weak var artistName: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+ 
+    
     func set(result : Results){
         imageArtist.sd_setImage(with: URL(string: result.artworkUrl100 ?? ""))
         

@@ -15,16 +15,20 @@ class BrowseVC: UIViewController {
     var BrowseMusic = [DataofSongs]()
     var topSongs    = [Results]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionHeader()
         configureCollectionCell()
-        
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchData()
+        fetchDataHeader()
     }
+    
     
     fileprivate func configureCollectionHeader(){
         browseCollectionView.register(UINib.init(nibName:  Constant.browseReusableView, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Constant.browseReusableView)
@@ -36,9 +40,16 @@ class BrowseVC: UIViewController {
         browseCollectionView.register(nib, forCellWithReuseIdentifier: Constant.browseCell)
     }
     
-    fileprivate func fetchData(){
-        self.showLoadingView()
-        
+    
+    func pushViewController(indexPath : Int){
+        let vc = DetailsTableView()
+        vc.index = indexPath
+        vc.navigationItem.title = "Browes"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    fileprivate func fetchDataHeader(){
         NetworkManger.shared.getTopSongs {[weak self] result in
             guard let self = self else{return}
             self.dismissLoadingView()
@@ -56,6 +67,12 @@ class BrowseVC: UIViewController {
                 self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
             }
         }
+    }
+    
+    
+    fileprivate func fetchData(){
+        self.showLoadingView()
+        
         var group1 :DataofSongs?
         var group2 :DataofSongs?
         var group3 :DataofSongs?
@@ -173,13 +190,36 @@ extension BrowseVC :UICollectionViewDelegate , UICollectionViewDataSource,UIColl
         return BrowseMusic.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.browseCell, for: indexPath)  as! BrowseCell
+        
         cell.titleLabel.text  =   self.BrowseMusic[indexPath.item].feed?.title
         cell.allSongs =  self.BrowseMusic[indexPath.item].feed?.results ?? []
+        
+        cell.didSelectCell = { [weak self] FeedResult in
+            self?.goSafari(urlString:FeedResult.artistUrl ?? "")
+        }
+        
+        cell.didSelect = {
+            if indexPath.item == 0 {
+                self.pushViewController(indexPath: indexPath.item)
+            }else if indexPath.item == 1 {
+                self.pushViewController(indexPath: indexPath.item)
+            }else if indexPath.item == 2 {
+                self.pushViewController(indexPath: indexPath.item)
+            }
+            else if indexPath.item == 3 {
+                self.pushViewController(indexPath: indexPath.item)
+            }
+
+        }
+        
         cell.collectionBrowseCell.reloadData()
         return cell
     }
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 500)
     }
@@ -188,106 +228,5 @@ extension BrowseVC :UICollectionViewDelegate , UICollectionViewDataSource,UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
     }
-    
+
 }
-//    func fetchData(){
-//        self.showLoadingView()
-//        NetworkManger.shared.getTopSongs {[weak self] result in
-//            guard let self = self else{return}
-//            self.dismissLoadingView()
-//            switch result {
-//            case .success(let response):
-//
-//                self.BrowseMusic = response.feed?.results ?? []
-//                self.dismissLoadingView()
-//                DispatchQueue.main.async {
-//                    self.title = response.feed?.title
-//                    self.browseCollectionView.reloadData()
-//                }
-//            case .failure(let error):
-//                self.dismissLoadingView()
-//
-//                self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
-//            }
-//        }
-//
-//
-//    NetworkManger.shared.getTopAlbums {[weak self] result in
-//        guard let self = self else{return}
-//        self.dismissLoadingView()
-//        switch result {
-//        case .success(let response):
-//
-//            self.BrowseMusic = response.feed?.results ?? []
-//            self.dismissLoadingView()
-//            DispatchQueue.main.async {
-//                self.title = response.feed?.title
-//                self.browseCollectionView.reloadData()
-//            }
-//        case .failure(let error):
-//            self.dismissLoadingView()
-//
-//            self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
-//        }
-//    }
-//
-//
-//    NetworkManger.shared.getNewReleases {[weak self] result in
-//        guard let self = self else{return}
-//        self.dismissLoadingView()
-//        switch result {
-//        case .success(let response):
-//
-//            self.BrowseMusic = response.feed?.results ?? []
-//            self.dismissLoadingView()
-//            DispatchQueue.main.async {
-//                self.title = response.feed?.title
-//                self.browseCollectionView.reloadData()
-//            }
-//        case .failure(let error):
-//            self.dismissLoadingView()
-//
-//            self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
-//        }
-//    }
-//
-//
-//    NetworkManger.shared.getComingSoon {[weak self] result in
-//        guard let self = self else{return}
-//        self.dismissLoadingView()
-//        switch result {
-//        case .success(let response):
-//
-//            self.BrowseMusic = response.feed?.results ?? []
-//            self.dismissLoadingView()
-//            DispatchQueue.main.async {
-//                self.title = response.feed?.title
-//                self.browseCollectionView.reloadData()
-//            }
-//        case .failure(let error):
-//            self.dismissLoadingView()
-//
-//            self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
-//        }
-//    }
-//
-//
-//    NetworkManger.shared.getHotTracks {[weak self] result in
-//        guard let self = self else{return}
-//        self.dismissLoadingView()
-//        switch result {
-//        case .success(let response):
-//
-//            self.BrowseMusic = response.feed?.results ?? []
-//            self.dismissLoadingView()
-//            DispatchQueue.main.async {
-//                self.title = response.feed?.title
-//                self.browseCollectionView.reloadData()
-//            }
-//        case .failure(let error):
-//            self.dismissLoadingView()
-//
-//            self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
-//        }
-//    }
-//}

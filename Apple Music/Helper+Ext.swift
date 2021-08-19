@@ -36,7 +36,7 @@ extension  UIViewController {
     func goSafari(urlString: String){
     guard let url = URL(string:urlString ) else {return}
     let safariVC = SFSafariViewController(url: url)
-    safariVC.preferredControlTintColor = .systemBlue
+    safariVC.preferredControlTintColor = .systemRed
     self.present(safariVC, animated: true)
     }
 }

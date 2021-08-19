@@ -12,20 +12,18 @@ class BrowseHeaderHorizontalCell: UICollectionViewCell {
     @IBOutlet weak var imageMusic: UIImageView!
     @IBOutlet weak var nameArtist: UILabel!
     @IBOutlet weak var nameMusic: UILabel!
-    var callBack: (() ->())?
-    var details = ""
-
+    @IBOutlet weak var nameLabel: UILabel!
+    
     func set(result :Results){
-//        for i in result.genres ?? []{
-//            if !details.isEmpty{
-//                details += ", "
-//            }
-        nameMusic.text = result.collectionName
-        nameArtist.text = result.artistName
-         //   nameArtist.text =  details
-
         imageMusic.sd_setImage(with: URL(string: result.artworkUrl100 ?? "" ))
-    }
 
+        nameMusic.text = result.collectionName
+        nameLabel.text = result.artistName
+
+        result.genres?.forEach({ i in
+           nameArtist.text = i.name
+       })
+    }
 }
+//    nameArtist.text = result.artistName
 

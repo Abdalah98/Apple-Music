@@ -29,5 +29,7 @@ enum Constant {
     static let browseReusableView         = "BrowseReusableView"
     static let browseFooterCell           = "BrowseFooterCell"
     static let browseCell                 = "BrowseCell"
+    static let detailsCell                 = "DetailsCell"
 
 }
+
