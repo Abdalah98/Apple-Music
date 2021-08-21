@@ -10,10 +10,16 @@
 		B2150A0226CA326500080F13 /* BrowseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2150A0126CA326500080F13 /* BrowseVC.swift */; };
 		B2150A0626CA32F100080F13 /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2150A0526CA32F100080F13 /* Browse.storyboard */; };
 		B2150A0A26CA330900080F13 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2150A0826CA330900080F13 /* Search.storyboard */; };
+		B257A7F926D06AED009E2D38 /* DetailsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257A7F826D06AED009E2D38 /* DetailsCollectionView.swift */; };
+		B257A80126D084ED009E2D38 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257A80026D084ED009E2D38 /* Feed.swift */; };
+		B257A80426D08502009E2D38 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257A80326D08502009E2D38 /* Results.swift */; };
+		B257A80726D0852C009E2D38 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257A80626D0852C009E2D38 /* Author.swift */; };
+		B257A80B26D0854A009E2D38 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257A80A26D0854A009E2D38 /* Link.swift */; };
+		B257A80F26D08564009E2D38 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257A80E26D08564009E2D38 /* Genre.swift */; };
 		B2662AC226CC3F0F0016F155 /* BrowesHeaderHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2662AC126CC3F0F0016F155 /* BrowesHeaderHorizontalController.swift */; };
 		B2662ACE26CC3F7D0016F155 /* BrowseHeaderHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2662ACC26CC3F7D0016F155 /* BrowseHeaderHorizontalCell.swift */; };
 		B2662ACF26CC3F7D0016F155 /* BrowseHeaderHorizontalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2662ACD26CC3F7D0016F155 /* BrowseHeaderHorizontalCell.xib */; };
-		B2662AD426CC4A660016F155 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2662AD326CC4A660016F155 /* File.swift */; };
+		B2662AD426CC4A660016F155 /* DataofSongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2662AD326CC4A660016F155 /* DataofSongs.swift */; };
 		B2662AD826CC84260016F155 /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2662AD726CC84260016F155 /* BetterSnappingLayout.swift */; };
 		B2662ADE26CC89040016F155 /* BrowseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2662ADC26CC89040016F155 /* BrowseCell.swift */; };
 		B2662ADF26CC89040016F155 /* BrowseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2662ADD26CC89040016F155 /* BrowseCell.xib */; };
@@ -46,10 +52,16 @@
 		B2150A0126CA326500080F13 /* BrowseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseVC.swift; sourceTree = "<group>"; };
 		B2150A0526CA32F100080F13 /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		B2150A0926CA330900080F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Apple Music/StoryBoard/Base.lproj/Search.storyboard"; sourceTree = "<group>"; };
+		B257A7F826D06AED009E2D38 /* DetailsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCollectionView.swift; sourceTree = "<group>"; };
+		B257A80026D084ED009E2D38 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		B257A80326D08502009E2D38 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		B257A80626D0852C009E2D38 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		B257A80A26D0854A009E2D38 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		B257A80E26D08564009E2D38 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		B2662AC126CC3F0F0016F155 /* BrowesHeaderHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowesHeaderHorizontalController.swift; sourceTree = "<group>"; };
 		B2662ACC26CC3F7D0016F155 /* BrowseHeaderHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseHeaderHorizontalCell.swift; sourceTree = "<group>"; };
 		B2662ACD26CC3F7D0016F155 /* BrowseHeaderHorizontalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseHeaderHorizontalCell.xib; sourceTree = "<group>"; };
-		B2662AD326CC4A660016F155 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		B2662AD326CC4A660016F155 /* DataofSongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataofSongs.swift; sourceTree = "<group>"; };
 		B2662AD726CC84260016F155 /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BetterSnappingLayout.swift; path = BrowseCell/Header/BetterSnappingLayout.swift; sourceTree = "<group>"; };
 		B2662ADC26CC89040016F155 /* BrowseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCell.swift; sourceTree = "<group>"; };
 		B2662ADD26CC89040016F155 /* BrowseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseCell.xib; sourceTree = "<group>"; };
@@ -117,14 +129,6 @@
 				B2662ACD26CC3F7D0016F155 /* BrowseHeaderHorizontalCell.xib */,
 			);
 			path = cell;
-			sourceTree = "<group>";
-		};
-		B2662AD226CC4A590016F155 /* TopSongs */ = {
-			isa = PBXGroup;
-			children = (
-				B2662AD326CC4A660016F155 /* File.swift */,
-			);
-			path = TopSongs;
 			sourceTree = "<group>";
 		};
 		B2662ADB26CC88C80016F155 /* Footer */ = {
@@ -231,6 +235,7 @@
 				B2150A0126CA326500080F13 /* BrowseVC.swift */,
 				B2C9751626CA24D200C2648B /* SearchVC.swift */,
 				B2EC7E3226CE1CE500A89715 /* DetailsTableView.swift */,
+				B257A7F826D06AED009E2D38 /* DetailsCollectionView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -265,7 +270,12 @@
 		B2C9755E26CA2A7F00C2648B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B2662AD226CC4A590016F155 /* TopSongs */,
+				B2662AD326CC4A660016F155 /* DataofSongs.swift */,
+				B257A80026D084ED009E2D38 /* Feed.swift */,
+				B257A80326D08502009E2D38 /* Results.swift */,
+				B257A80626D0852C009E2D38 /* Author.swift */,
+				B257A80A26D0854A009E2D38 /* Link.swift */,
+				B257A80E26D08564009E2D38 /* Genre.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -379,20 +389,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C9755C26CA28BE00C2648B /* NetworkManger.swift in Sources */,
+				B257A80126D084ED009E2D38 /* Feed.swift in Sources */,
+				B257A7F926D06AED009E2D38 /* DetailsCollectionView.swift in Sources */,
+				B257A80426D08502009E2D38 /* Results.swift in Sources */,
 				B2EC7E2E26CE1B7300A89715 /* DetailsCell.swift in Sources */,
 				B2662AC226CC3F0F0016F155 /* BrowesHeaderHorizontalController.swift in Sources */,
 				B2C9751726CA24D200C2648B /* SearchVC.swift in Sources */,
 				B2662AE426CC89AD0016F155 /* BrowseFooterCollectionView.swift in Sources */,
 				B2EC7E3326CE1CE500A89715 /* DetailsTableView.swift in Sources */,
 				B2C9755326CA27DF00C2648B /* Constant.swift in Sources */,
+				B257A80B26D0854A009E2D38 /* Link.swift in Sources */,
 				B2662ACE26CC3F7D0016F155 /* BrowseHeaderHorizontalCell.swift in Sources */,
 				B2C9754726CA275800C2648B /* UIView.swift in Sources */,
 				B2662AD826CC84260016F155 /* BetterSnappingLayout.swift in Sources */,
 				B2D5278626CB80FC003DC0DD /* BrowseReusableView.swift in Sources */,
-				B2662AD426CC4A660016F155 /* File.swift in Sources */,
+				B257A80F26D08564009E2D38 /* Genre.swift in Sources */,
+				B2662AD426CC4A660016F155 /* DataofSongs.swift in Sources */,
 				B2C9754D26CA27A900C2648B /* ResoneError.swift in Sources */,
 				B2150A0226CA326500080F13 /* BrowseVC.swift in Sources */,
 				B2662ADE26CC89040016F155 /* BrowseCell.swift in Sources */,
+				B257A80726D0852C009E2D38 /* Author.swift in Sources */,
 				B2662AE926CC89FA0016F155 /* BrowseFooterCell.swift in Sources */,
 				B2C9755826CA28AF00C2648B /* Helper+Ext.swift in Sources */,
 				B2C9751326CA24D200C2648B /* AppDelegate.swift in Sources */,

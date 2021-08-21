@@ -8,7 +8,7 @@
 import Foundation
 enum URLS{
     static let country            = "us"
-    static let resultsLimit       = "50"
+    static let resultsLimit       = "100"
     static let mediaType          = "apple-music"
 
     static let main               = "https://rss.itunes.apple.com/api/v1/\(country)/\(mediaType)/"

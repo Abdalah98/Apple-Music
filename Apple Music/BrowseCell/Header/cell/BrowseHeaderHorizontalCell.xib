@@ -43,7 +43,7 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="12"/>
+                                <real key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
@@ -52,11 +52,32 @@
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHm-Qu-WSt">
+                        <rect key="frame" x="0.0" y="191" width="345" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelfdsfsdfdsfsdafsdfsdfsdfsdfsdfdsfsdfsdfdsfsdfdasfadsfsdfdasfsadfdasfsadfsadfsadfsadfadsfdsf" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYe-Jq-Bbl">
+                                <rect key="frame" x="8" y="0.0" width="329" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="0WM-T5-RC9"/>
+                            <constraint firstItem="cYe-Jq-Bbl" firstAttribute="top" secondItem="UHm-Qu-WSt" secondAttribute="top" id="8vX-S5-Z88"/>
+                            <constraint firstItem="cYe-Jq-Bbl" firstAttribute="leading" secondItem="UHm-Qu-WSt" secondAttribute="leading" constant="8" id="Ngm-XF-Exf"/>
+                            <constraint firstAttribute="bottom" secondItem="cYe-Jq-Bbl" secondAttribute="bottom" id="SUz-QM-Jco"/>
+                            <constraint firstAttribute="trailing" secondItem="cYe-Jq-Bbl" secondAttribute="trailing" constant="8" id="mbJ-dm-9QZ"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="UHm-Qu-WSt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5i4-gX-dSh"/>
                 <constraint firstItem="an6-wR-w90" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CWA-NT-Yha"/>
+                <constraint firstAttribute="trailing" secondItem="UHm-Qu-WSt" secondAttribute="trailing" id="MA9-4i-Pzy"/>
                 <constraint firstItem="7hw-gL-go4" firstAttribute="top" secondItem="xPz-3N-Ayt" secondAttribute="bottom" constant="5" id="QUp-5a-KIZ"/>
                 <constraint firstAttribute="trailing" secondItem="xPz-3N-Ayt" secondAttribute="trailing" id="SKt-TG-AiV"/>
                 <constraint firstItem="vHw-RH-Vu3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UWh-3A-TCn"/>
@@ -65,6 +86,7 @@
                 <constraint firstAttribute="trailing" secondItem="7hw-gL-go4" secondAttribute="trailing" id="ZOj-kb-fE3"/>
                 <constraint firstItem="ljG-IX-dOP" firstAttribute="top" secondItem="7hw-gL-go4" secondAttribute="bottom" constant="8" id="acy-8O-Pkc"/>
                 <constraint firstItem="ljG-IX-dOP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ahE-ts-B8O"/>
+                <constraint firstAttribute="bottom" secondItem="UHm-Qu-WSt" secondAttribute="bottom" id="b3i-87-0dX"/>
                 <constraint firstItem="vHw-RH-Vu3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="ewh-Xq-GBc"/>
                 <constraint firstAttribute="trailing" secondItem="ljG-IX-dOP" secondAttribute="trailing" id="rzt-eP-vsZ"/>
                 <constraint firstItem="an6-wR-w90" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tnj-Fn-Mof"/>
@@ -74,16 +96,21 @@
             </constraints>
             <size key="customSize" width="345" height="255"/>
             <connections>
+                <outlet property="copyRightLabel" destination="cYe-Jq-Bbl" id="P6K-Vd-9e9"/>
                 <outlet property="imageMusic" destination="ljG-IX-dOP" id="20M-0x-rsC"/>
                 <outlet property="nameArtist" destination="xPz-3N-Ayt" id="POa-BC-kyB"/>
                 <outlet property="nameLabel" destination="vHw-RH-Vu3" id="V2g-Mj-jpr"/>
                 <outlet property="nameMusic" destination="7hw-gL-go4" id="X75-If-Tcj"/>
+                <outlet property="view" destination="UHm-Qu-WSt" id="21p-aG-Mj9"/>
             </connections>
-            <point key="canvasLocation" x="144" y="49"/>
+            <point key="canvasLocation" x="142.75362318840581" y="48.549107142857139"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="appleMusic" width="350" height="350"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

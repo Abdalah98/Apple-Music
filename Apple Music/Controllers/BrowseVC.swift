@@ -27,6 +27,7 @@ class BrowseVC: UIViewController {
         super.viewWillAppear(animated)
         fetchData()
         fetchDataHeader()
+
     }
     
     
@@ -49,7 +50,16 @@ class BrowseVC: UIViewController {
     }
     
     
+    func pushViewController2(indexPath : Int){
+        let vc = DetailsCollectionView(collectionViewLayout: UICollectionViewFlowLayout())
+        vc.index = indexPath
+        vc.navigationItem.title = "Browes"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     fileprivate func fetchDataHeader(){
+        BrowseMusic.removeAll()
+
         NetworkManger.shared.getTopSongs {[weak self] result in
             guard let self = self else{return}
             self.dismissLoadingView()
@@ -195,7 +205,7 @@ extension BrowseVC :UICollectionViewDelegate , UICollectionViewDataSource,UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.browseCell, for: indexPath)  as! BrowseCell
         
         cell.titleLabel.text  =   self.BrowseMusic[indexPath.item].feed?.title
-        cell.allSongs =  self.BrowseMusic[indexPath.item].feed?.results ?? []
+        cell.allSongs         =  self.BrowseMusic[indexPath.item].feed?.results ?? []
         
         cell.didSelectCell = { [weak self] FeedResult in
             self?.goSafari(urlString:FeedResult.artistUrl ?? "")
@@ -205,12 +215,12 @@ extension BrowseVC :UICollectionViewDelegate , UICollectionViewDataSource,UIColl
             if indexPath.item == 0 {
                 self.pushViewController(indexPath: indexPath.item)
             }else if indexPath.item == 1 {
-                self.pushViewController(indexPath: indexPath.item)
+                self.pushViewController2(indexPath: indexPath.item)
             }else if indexPath.item == 2 {
                 self.pushViewController(indexPath: indexPath.item)
             }
             else if indexPath.item == 3 {
-                self.pushViewController(indexPath: indexPath.item)
+                self.pushViewController2(indexPath: indexPath.item)
             }
 
         }

@@ -40,7 +40,7 @@ extension BrowseReusableView : UICollectionViewDelegate, UICollectionViewDataSou
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.browseHeaderHorizontalCell, for: indexPath) as! BrowseHeaderHorizontalCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.browseHeaderHorizontalCell, for: indexPath) as! BrowseHeaderHorizontalCell        
         cell.set(result: topSong[indexPath.item])
         return cell
         
