@@ -26,7 +26,7 @@ extension SearchVC :UISearchBarDelegate, UISearchControllerDelegate{
             case .failure(let error):
                 self.dismissLoadingView()
                 
-             self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
+                self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
             }
         }
     }
