@@ -29,7 +29,7 @@ class DetailsCollectionView: UICollectionViewController ,UICollectionViewDelegat
         let nib = UINib(nibName: Constant.browseFooterCell, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: Constant.browseFooterCell)
     }
-
+    
     
     func fetchData(indexPath : Int ){
         self.showLoadingView()
@@ -109,6 +109,6 @@ class DetailsCollectionView: UICollectionViewController ,UICollectionViewDelegat
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         goSafari(urlString: BrowseMusic[indexPath.row].url ?? "")
-
+        
     }
 }

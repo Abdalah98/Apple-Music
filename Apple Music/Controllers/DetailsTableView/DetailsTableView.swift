@@ -11,6 +11,8 @@ class DetailsTableView: UITableViewController {
     
     var  BrowseMusic = [Results]()
     var index : Int?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNIBCell()
@@ -79,6 +81,7 @@ class DetailsTableView: UITableViewController {
         }
         
     }
+    
     // MARK: - Table view data source
     
     fileprivate func tableViewDesign() {
@@ -104,99 +107,7 @@ class DetailsTableView: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         goSafari(urlString: BrowseMusic[indexPath.row].url ?? "")
-        
     }
 }
 
-
-
-
-/*
- func fetchData(indexPath : Int ){
- self.showLoadingView()
- 
- if indexPath == 0 {
- NetworkManger.shared.getTopAlbums {[weak self] result in
- guard let self = self else{return}
- self.dismissLoadingView()
- switch result {
- case .success(let response):
- 
- self.BrowseMusic = response.feed?.results ?? []
- self.dismissLoadingView()
- DispatchQueue.main.async {
- self.title = response.feed?.title
- self.tableView.reloadData()
- }
- case .failure(let error):
- self.dismissLoadingView()
- 
- self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
- }
- }
- 
- }
- //            else  if indexPath == 1 {
- //        NetworkManger.shared.getNewReleases {[weak self] result in
- //            guard let self = self else{return}
- //            self.dismissLoadingView()
- //            switch result {
- //            case .success(let response):
- //
- //                self.BrowseMusic = response.feed?.results ?? []
- //                self.dismissLoadingView()
- //                DispatchQueue.main.async {
- //                    self.title = response.feed?.title
- //                    self.tableView.reloadData()
- //                }
- //            case .failure(let error):
- //                self.dismissLoadingView()
- //
- //                self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
- //            }
- //        }
- //            }
- else  if indexPath == 2 {
- 
- NetworkManger.shared.getComingSoon {[weak self] result in
- guard let self = self else{return}
- self.dismissLoadingView()
- switch result {
- case .success(let response):
- 
- self.BrowseMusic = response.feed?.results ?? []
- self.dismissLoadingView()
- DispatchQueue.main.async {
- self.title = response.feed?.title
- self.tableView.reloadData()
- }
- case .failure(let error):
- self.dismissLoadingView()
- 
- self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
- }
- }
- 
- }
- //            else  if indexPath == 3 {
- //        NetworkManger.shared.getHotTracks {[weak self] result in
- //            guard let self = self else{return}
- //            self.dismissLoadingView()
- //            switch result {
- //            case .success(let response):
- //
- //                self.BrowseMusic = response.feed?.results ?? []
- //                self.dismissLoadingView()
- //                DispatchQueue.main.async {
- //                    self.title = response.feed?.title
- //                    self.tableView.reloadData()
- //                }
- //            case .failure(let error):
- //                self.dismissLoadingView()
- //
- //                self.showAlert(withTitle: "Some thing error", withMessage: error.rawValue)
- //            }
- //        }
- //    }**/

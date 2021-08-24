@@ -37,11 +37,12 @@ class NetworkManger {
     }
     
     
-//    func searchAllEverything(searchText:String,completion: @escaping (Result<TopHeadlinesCountry , ResoneError>) -> Void){
-//        let urlString = URLS.main +  "everything?q=\(searchText)&from=2021-08-13&sortBy=popularity&apiKey=" + URLS.apiKey
-//        fetchGenericJSONData(urlString: urlString, completion: completion)
-//    }
-//    
+    func searchResultMusic(searchText:String,completion: @escaping (Result<SearchResult , ResoneError>) -> Void){
+        let urlString = "https://itunes.apple.com/search?term=\(searchText)&entity=musicVideo"
+           // URLS.main + "/search?term=\(searchText)&entity=musicVeido"
+        fetchGenericJSONData(urlString: urlString, completion: completion)
+    }
+    
     
     
     func fetchGenericJSONData<T:Codable>(urlString:String,completion: @escaping (Result<T , ResoneError>) -> Void){
